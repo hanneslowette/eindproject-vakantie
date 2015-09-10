@@ -1,4 +1,4 @@
-package org.betavzw;
+package ejbs;
 
 import java.time.LocalDate;
 
