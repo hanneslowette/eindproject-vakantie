@@ -1,4 +1,4 @@
-package org.betavzw.ejbs;
+package org.betavzw.entities;
 
 public class Team {
 	private String naam;
