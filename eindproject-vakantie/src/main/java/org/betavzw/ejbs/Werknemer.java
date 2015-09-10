@@ -8,7 +8,7 @@ public class Werknemer {
 	private String voornaam;
 	private String email;
 	private LocalDate geboortedatum;
-	private int personeelsnr;
+	private int personeelsNr;
 	private String adres;
 	private int postcode;
 	private String gemeente;
@@ -46,12 +46,12 @@ public class Werknemer {
 		this.geboortedatum = geboortedatum;
 	}
 
-	public int getPersoneelsnr() {
-		return personeelsnr;
+	public int getPersoneelsNr() {
+		return personeelsNr;
 	}
 
-	public void setPersoneelsnr(int personeelsnr) {
-		this.personeelsnr = personeelsnr;
+	public void setPersoneelsNr(int personeelsNr) {
+		this.personeelsNr = personeelsNr;
 	}
 
 	public String getAdres() {
