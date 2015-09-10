@@ -53,6 +53,11 @@ public class Werknemer {
 	 * Het wachtwoord van de werknemer
 	 */
 	private String paswoord;
+	
+	/**
+	 * Het team waartoe deze werknemer geboord
+	 */
+	private Team team;
 
 	public String getNaam() {
 		return naam;
@@ -124,6 +129,14 @@ public class Werknemer {
 
 	public void setPaswoord(String paswoord) {
 		this.paswoord = paswoord;
+	}
+
+	public Team getTeam() {
+		return team;
+	}
+
+	public void setTeam(Team team) {
+		this.team = team;
 	}
 
 }
