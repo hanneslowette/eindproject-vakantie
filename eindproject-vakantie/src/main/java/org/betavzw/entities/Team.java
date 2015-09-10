@@ -1,8 +1,10 @@
 package org.betavzw.entities;
 
 public class Team {
+	
 	private String naam;
 	private String code;
+	private Werknemer teamverantwoordelijke;
 
 	public String getNaam() {
 		return naam;
@@ -20,4 +22,14 @@ public class Team {
 		this.code = code;
 	}
 
+	public Werknemer getTeamverantwoordelijke() {
+		return teamverantwoordelijke;
+	}
+
+	public void setTeamverantwoordelijke(Werknemer teamverantwoordelijke) {
+		this.teamverantwoordelijke = teamverantwoordelijke;
+	}
+
+	
+	
 }

@@ -3,6 +3,7 @@ package org.betavzw.entities;
 import java.time.LocalDate;
 
 public class CollectiefVerlof extends CollectieveSluiting {
+	
 	private LocalDate eindDatum;
 
 	public LocalDate getEindDatum() {
