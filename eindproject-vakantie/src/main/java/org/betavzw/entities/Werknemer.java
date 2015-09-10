@@ -2,16 +2,56 @@ package org.betavzw.entities;
 
 import java.time.LocalDate;
 
+/**
+ * 
+ * 
+ * @author Koen De Voegt
+ */
 public class Werknemer {
 
+	/**
+	 * De achternaam van de werknemer
+	 */
 	private String naam;
+	
+	/**
+	 * De voornaam van de werknemer
+	 */
 	private String voornaam;
+	
+	/**
+	 * Het e-mail adres van de gebruiker. Gebruikt als username bij login.
+	 */
 	private String email;
+	
+	/**
+	 * De geboortedatum van de werknemer
+	 */
 	private LocalDate geboortedatum;
+	
+	/**
+	 * De personeelsnummer van de werknemer (primary key in de databank)
+	 */
 	private int personeelsNr;
+	
+	/**
+	 * Het adres (de straatnaam en huisnummer) van de werknemer
+	 */
 	private String adres;
+	
+	/**
+	 * De postcode van de gemeente waar de werknemer woont
+	 */
 	private int postcode;
+	
+	/**
+	 * De naam van de gemeente
+	 */
 	private String gemeente;
+	
+	/**
+	 * Het wachtwoord van de werknemer
+	 */
 	private String paswoord;
 
 	public String getNaam() {
