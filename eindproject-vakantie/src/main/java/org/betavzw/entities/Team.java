@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Team {
-	
+
 	private String naam;
 	private String code;
 	private Werknemer teamverantwoordelijke;
@@ -12,14 +12,6 @@ public class Team {
 
 	public String getNaam() {
 		return naam;
-	}
-
-	public Set<Werknemer> getTeamLeden() {
-		return teamLeden;
-	}
-
-	public void setTeamLeden(Set<Werknemer> teamLeden) {
-		this.teamLeden = teamLeden;
 	}
 
 	public void setNaam(String naam) {
@@ -42,8 +34,16 @@ public class Team {
 		this.teamverantwoordelijke = teamverantwoordelijke;
 	}
 
-	public void addWerknemer(Werknemer teamlid) {
-		
+	public Set<Werknemer> getTeamLeden() {
+		return teamLeden;
 	}
-	
+
+	public void setTeamLeden(Set<Werknemer> teamLeden) {
+		this.teamLeden = teamLeden;
+	}
+
+	public void addWerknemer(Werknemer teamlid) {
+		teamLeden.add(teamlid);
+	}
+
 }
