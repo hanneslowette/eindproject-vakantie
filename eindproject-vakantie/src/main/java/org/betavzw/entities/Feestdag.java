@@ -1,5 +1,5 @@
 package org.betavzw.entities;
 
-public class Feestdag {
+public class Feestdag extends CollectieveSluiting {
 
 }

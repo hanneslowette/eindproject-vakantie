@@ -2,7 +2,7 @@ package org.betavzw.entities;
 
 import java.time.LocalDate;
 
-public class CollectieveSluiting {
+public abstract class CollectieveSluiting {
 
 	private LocalDate startDatum;
 	private String omschrijving;
