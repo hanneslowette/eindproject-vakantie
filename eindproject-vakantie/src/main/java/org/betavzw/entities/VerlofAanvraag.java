@@ -3,9 +3,25 @@ package org.betavzw.entities;
 import java.time.LocalDate;
 
 public class VerlofAanvraag {
+	
+	/**
+	 * De start datum van de aanvraag van verlof
+	 */
 	private LocalDate startDatum;
+	
+	/**
+	 * De eind datum van de aanvraag van het verlof
+	 */
 	private LocalDate eindDatum;
+	
+	/**
+	 * De datum wanneer de aanvraag is geplaatst
+	 */
 	private LocalDate aanvraagDatum;
+	
+	/**
+	 * De huidige toestand van de aanvraag
+	 */
 	private int toestand;
 
 	public LocalDate getStartDatum() {
