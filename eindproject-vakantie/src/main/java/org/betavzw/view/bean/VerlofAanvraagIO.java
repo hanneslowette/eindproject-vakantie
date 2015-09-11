@@ -7,10 +7,11 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 import org.betavzw.entities.VerlofAanvraag;
+import org.betavzw.util.Toestand;
 
 @Named("verlofAanvraag")
 @SessionScoped
-public class VerlofAanvraagBean {
+public class VerlofAanvraagIO {
 
 	@EJB
 	private VerlofAanvraag verlofAanvraag;
@@ -38,12 +39,16 @@ public class VerlofAanvraagBean {
 	}
 
 	public void setEindDatum(Date eindDatum) {
-		if (startDatum.before(eindDatum)) {
-			this.eindDatum = eindDatum;
-		}
+		this.eindDatum = eindDatum;
 	}
 
 	public String verstuur() {
-		return "home.xhtml";
+		String pagina = "";
+		if (startDatum.before(eindDatum)) {
+			if (verlofAanvraag.getToestand() == Toestand.ACCEPTED) {
+				pagina = "verlofgoedgekeurd";
+			}
+		}
+		return pagina;
 	}
 }
