@@ -5,26 +5,31 @@ import java.time.LocalDate;
 import org.betavzw.util.Toestand;
 
 public class VerlofAanvraag {
-	
+
 	/**
 	 * De start datum van de aanvraag van verlof
 	 */
 	private LocalDate startDatum;
-	
+
 	/**
 	 * De eind datum van de aanvraag van het verlof
 	 */
 	private LocalDate eindDatum;
-	
+
 	/**
 	 * De datum wanneer de aanvraag is geplaatst
 	 */
 	private LocalDate aanvraagDatum;
-	
+
 	/**
 	 * De huidige toestand van de aanvraag
 	 */
 	private Toestand toestand = Toestand.PENDING;
+
+	/**
+	 * De werknemer die deze verlofaanvraag maakt
+	 */
+	private Werknemer werknemer;
 
 	public LocalDate getStartDatum() {
 		return startDatum;
@@ -56,6 +61,14 @@ public class VerlofAanvraag {
 
 	public void setToestand(Toestand toestand) {
 		this.toestand = toestand;
+	}
+
+	public Werknemer getWerknemer() {
+		return werknemer;
+	}
+
+	public void setWerknemer(Werknemer werknemer) {
+		this.werknemer = werknemer;
 	}
 
 	public void Goedkeuren() {
