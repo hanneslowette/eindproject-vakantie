@@ -16,8 +16,8 @@ public class HibernateMain {
 		
 		EntityManager em = emf.createEntityManager();
 
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
+//		EntityTransaction tx = em.getTransaction();
+//		tx.begin();
 		
 		Werknemer koen = new Werknemer();
 		koen.setNaam("Koen");
@@ -27,11 +27,10 @@ public class HibernateMain {
 		koen.setNaam("Courtois");
 		koen.setVoornaam("Brent");
 		
-		em.persist(koen);
-		em.persist(brent);
-		
-		
-		em.close();
+//		em.persist(koen);
+//		em.persist(brent);
+//
+//		em.close();
 		emf.close();
 		
 	}
