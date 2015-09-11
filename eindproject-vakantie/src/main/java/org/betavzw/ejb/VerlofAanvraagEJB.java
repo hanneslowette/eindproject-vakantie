@@ -36,14 +36,40 @@ public class VerlofAanvraagEJB implements VerlofAanvraagEJBLocal {
 		manager.persist(verlofAanvraag);
 		return verlofAanvraag;
 	}
-	
-	public VerlofAanvraag aanmaken(LocalDate startDatum, LocalDate eindDatum, LocalDate aanvraagDatum, Toestand toestand, Werknemer werknemer) {
-		VerlofAanvraag verlofAanvraag = new verlofAanvraag();
-		team.setNaam(naam);
-		team.setCode(code);
-		team.setTeamverantwoordelijke(teamverantwoordelijke);
-		team.setTeamLeden(new HashSet<>());
-		return this.aanmaken(team);
+
+//	public VerlofAanvraag aanmaken(LocalDate startDatum, LocalDate eindDatum,
+//			LocalDate aanvraagDatum) {
+//		VerlofAanvraag verlofAanvraag = new VerlofAanvraag();
+//		verlofAanvraag.setStartDatum(startDatum);
+//		verlofAanvraag.setEindDatum(eindDatum);
+//		verlofAanvraag.setAanvraagDatum(aanvraagDatum);
+//		return this.verlofAanmaken(verlofAanvraag);
+//	}
+//
+//	public VerlofAanvraag aanmaken(LocalDate startDatum, LocalDate eindDatum,
+//			LocalDate aanvraagDatum, Werknemer werknemer) {
+//		VerlofAanvraag verlofAanvraag = new VerlofAanvraag();
+//		verlofAanvraag.setStartDatum(startDatum);
+//		verlofAanvraag.setEindDatum(eindDatum);
+//		verlofAanvraag.setAanvraagDatum(aanvraagDatum);
+//		verlofAanvraag.setWerknemer(werknemer);
+//		return this.verlofAanmaken(verlofAanvraag);
+//	}
+
+	public VerlofAanvraag aanmaken(LocalDate startDatum, LocalDate eindDatum,
+			LocalDate aanvraagDatum, Toestand toestand, Werknemer werknemer) {
+		VerlofAanvraag verlofAanvraag = new VerlofAanvraag();
+		verlofAanvraag.setStartDatum(startDatum);
+		verlofAanvraag.setEindDatum(eindDatum);
+		verlofAanvraag.setAanvraagDatum(aanvraagDatum);
+		verlofAanvraag.setToestand(toestand);
+		verlofAanvraag.setWerknemer(werknemer);
+		return this.verlofAanmaken(verlofAanvraag);
+	}
+
+	@Transactional
+	public VerlofAanvraag get(int id) {
+		return manager.find(VerlofAanvraag.class, id);
 	}
 
 }
