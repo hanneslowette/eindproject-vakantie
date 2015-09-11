@@ -1,5 +1,5 @@
 package org.betavzw.util;
 
-public enum Status {
+public enum Toestand {
 	PENDING, ACCEPTED, REJECTED, CANCELED;
 }

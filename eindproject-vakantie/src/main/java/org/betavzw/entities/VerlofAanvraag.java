@@ -2,7 +2,7 @@ package org.betavzw.entities;
 
 import java.time.LocalDate;
 
-import org.betavzw.util.Status;
+import org.betavzw.util.Toestand;
 
 public class VerlofAanvraag {
 	
@@ -24,7 +24,7 @@ public class VerlofAanvraag {
 	/**
 	 * De huidige toestand van de aanvraag
 	 */
-	private Status toestand;
+	private Toestand toestand;
 
 	public LocalDate getStartDatum() {
 		return startDatum;
@@ -50,11 +50,11 @@ public class VerlofAanvraag {
 		this.aanvraagDatum = aanvraagDatum;
 	}
 
-	public Status getToestand() {
+	public Toestand getToestand() {
 		return toestand;
 	}
 
-	public void setToestand(Status toestand) {
+	public void setToestand(Toestand toestand) {
 		this.toestand = toestand;
 	}
 
