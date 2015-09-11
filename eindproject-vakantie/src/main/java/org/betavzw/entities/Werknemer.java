@@ -71,6 +71,25 @@ public class Werknemer {
 	 */
 	private Team team;
 	
+	
+	
+	
+	
+	public Werknemer() {
+		super();
+	}
+
+	public Werknemer(String naam, String voornaam, String email,
+			LocalDate geboortedatum,  String adres) {
+		super();
+		this.naam = naam;
+		this.voornaam = voornaam;
+		this.email = email;
+		this.geboortedatum = geboortedatum;
+		
+		this.adres = adres;
+	}
+
 	/**
 	 * Het aantal verlofdagen dat deze werknemer in gegeven jaar heeft
 	 */

@@ -17,5 +17,9 @@ import javax.persistence.PersistenceContext;
 	 * 
 	 */
 	@PersistenceContext private EntityManager manager;
+	
+	public void voegPersoonToe() {
+		
+	}
 
 }
