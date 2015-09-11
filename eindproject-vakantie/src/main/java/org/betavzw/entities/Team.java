@@ -19,6 +19,21 @@ public class Team {
 	private String code;
 	private Werknemer teamverantwoordelijke;
 	private Set<Werknemer> teamLeden = new HashSet<Werknemer>();
+	
+	
+
+	public Team() {
+		super();
+	}
+	
+	
+
+	public Team(String naam) {
+		super();
+		this.naam = naam;
+	}
+
+
 
 	public String getNaam() {
 		return naam;

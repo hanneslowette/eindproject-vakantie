@@ -2,9 +2,15 @@ package org.betavzw.view.bean;
 
 import java.sql.Date;
 
+import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+
 import org.betavzw.entities.Adres;
 import org.betavzw.entities.Werknemer;
 
+@Named
+@RequestScoped
 public class WerknemerToevoegenIO {
 	private String naam;
 	private String voornaam;
