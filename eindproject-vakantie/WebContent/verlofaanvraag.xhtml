@@ -11,10 +11,10 @@
 	<h:form>
 		<h:outputLabel for="txtStartDatum"
 			value="Geef startdatum van uw verlof"></h:outputLabel>
-		<h:inputText id="txtStartDatum" value=""></h:inputText>
+		<h:inputText id="txtStartDatum" value="verlofAanvraag.startDatum"></h:inputText>
 		<h:outputLabel for="txtEindDatum" value="Geef einddatum van uw verlof"></h:outputLabel>
-		<h:inputText id="txtEindDatum" value=""></h:inputText>
-		<h:commandButton value="Verstuur" action=""></h:commandButton>
+		<h:inputText id="txtEindDatum" value="verlofAanvraag.eindDatum"></h:inputText>
+		<h:commandButton value="Verstuur" action="verlofAanvraag.verstuur"></h:commandButton>
 	</h:form>
 </h:body>
 </html>
