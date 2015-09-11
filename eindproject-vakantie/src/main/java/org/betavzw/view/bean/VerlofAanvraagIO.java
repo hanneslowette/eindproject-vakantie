@@ -1,5 +1,6 @@
 package org.betavzw.view.bean;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.ejb.EJB;
@@ -11,8 +12,12 @@ import org.betavzw.util.Toestand;
 
 @Named("verlofAanvraag")
 @SessionScoped
-public class VerlofAanvraagIO {
+public class VerlofAanvraagIO implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@EJB
 	private VerlofAanvraag verlofAanvraag;
 	private Date startDatum;
@@ -45,8 +50,13 @@ public class VerlofAanvraagIO {
 	public String verstuur() {
 		String pagina = "";
 		if (startDatum.before(eindDatum)) {
+			// TODO: zet message dat startdatum voor einddatum moet komen
+			pagina = "verlofaanvraag";
 			if (verlofAanvraag.getToestand() == Toestand.ACCEPTED) {
 				pagina = "verlofgoedgekeurd";
+			}
+			if (verlofAanvraag.getToestand() == Toestand.REJECTED) {
+				pagina = "verlofafgekeurd";
 			}
 		}
 		return pagina;
