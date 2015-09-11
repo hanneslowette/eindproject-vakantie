@@ -66,6 +66,11 @@ public class Werknemer {
 	 */
 	private Set<JaarlijksVerlof> jaarlijkseVerloven = new HashSet<JaarlijksVerlof>();
 
+	/**
+	 * De verlofaanvragen van deze werknemer
+	 */
+	private Set<VerlofAanvraag> verlofAanvragen = new HashSet<VerlofAanvraag>();
+
 	
 	public String getNaam() {
 		return naam;
@@ -153,6 +158,22 @@ public class Werknemer {
 
 	public void setJaarlijkseVerloven(Set<JaarlijksVerlof> jaarlijkseVerloven) {
 		this.jaarlijkseVerloven = jaarlijkseVerloven;
+	}
+	
+	public void addJaarlijksVerlof(JaarlijksVerlof jaarlijksVerlof) {
+		jaarlijkseVerloven.add(jaarlijksVerlof);
+	}
+
+	public Set<VerlofAanvraag> getVerlofAanvragen() {
+		return verlofAanvragen;
+	}
+
+	public void setVerlofAanvragen(Set<VerlofAanvraag> verlofAanvragen) {
+		this.verlofAanvragen = verlofAanvragen;
+	}
+	
+	public void addVerlofAanvraag(VerlofAanvraag verlofAanvraag) {
+		verlofAanvragen.add(verlofAanvraag);
 	}
 
 }
