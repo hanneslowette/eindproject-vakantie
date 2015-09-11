@@ -2,10 +2,20 @@ package org.betavzw.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import org.betavzw.util.Toestand;
 
+@Entity
 public class VerlofAanvraag {
 
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
 	/**
 	 * De start datum van de aanvraag van verlof
 	 */
