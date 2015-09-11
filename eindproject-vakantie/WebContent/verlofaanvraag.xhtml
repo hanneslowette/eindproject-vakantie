@@ -9,6 +9,15 @@
 </h:head>
 <h:body>
 	<h:form>
+		<h:outputLabel for="txtVoornaamWerknemer" value="Geef uw voornaam: "></h:outputLabel>
+		<h:inputText id="txtVoornaamWerknemer"
+			value="#{verlofGoedkeuren.voornaam}"></h:inputText>
+		<h:outputLabel for="txtNaamWerknemer" value="Geef uw naam: "></h:outputLabel>
+		<h:inputText id="txtNaamWerknemer" value="#{verlofGoedkeuren.naam}"></h:inputText>
+		<h:outputLabel for="txtPersoneelsNr"
+			value="Geef uw personeelsnummer: "></h:outputLabel>
+		<h:inputText id="txtPersoneelsNr"
+			value="#{verlofGoedkeuren.personeelsNr}"></h:inputText>
 		<h:outputLabel for="txtStartDatum"
 			value="Geef startdatum van uw verlof"></h:outputLabel>
 		<h:inputText id="txtStartDatum" value="verlofAanvraag.startDatum"></h:inputText>

@@ -8,7 +8,7 @@ import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
-import org.betavzw.entities.VerlofAanvraag;
+import org.betavzw.ejb.VerlofAanvraagEJB;
 
 @Named("verlofGoedkeuren")
 @SessionScoped
@@ -19,22 +19,8 @@ public class VerlofGoedkeurenIO implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	@EJB
-	private VerlofAanvraag verlofAanvraag;
+	private VerlofAanvraagEJB verlofAanvraagEJB;
 	private String keuring;
-
-	public String getWerknemer() {
-		return verlofAanvraag.getWerknemer().getNaam();
-	}
-
-	public Date getStartDatum() {
-		return Date.from(verlofAanvraag.getStartDatum().atStartOfDay()
-				.atZone(ZoneId.systemDefault()).toInstant());
-	}
-
-	public Date getEindDatum() {
-		return Date.from(verlofAanvraag.getEindDatum().atStartOfDay()
-				.atZone(ZoneId.systemDefault()).toInstant());
-	}
 
 	public String getKeuring() {
 		return keuring;
@@ -44,13 +30,35 @@ public class VerlofGoedkeurenIO implements Serializable {
 		this.keuring = keuring;
 	}
 
+	public Date getStartDatum() {
+		return Date.from(verlofAanvraagEJB.getStartDatum().atStartOfDay()
+				.atZone(ZoneId.systemDefault()).toInstant());
+	}
+
+	public Date getEindDatum() {
+		return Date.from(verlofAanvraagEJB.getEindDatum().atStartOfDay()
+				.atZone(ZoneId.systemDefault()).toInstant());
+	}
+
+	public String getVoornaam() {
+		return "";
+	}
+
+	public String getNaam() {
+		return "";
+	}
+
+	public int getPersoneelsNr() {
+		return 0;
+	}
+
 	public String verstuur() {
 		if (keuring.equalsIgnoreCase("accept")) {
-			verlofAanvraag.Goedkeuren();
+			verlofAanvraagEJB.goedkeuren();
 		} else if (keuring.equalsIgnoreCase("reject")) {
-			verlofAanvraag.Afkeuren();
+			verlofAanvraagEJB.afkeuren();
 		} else if (keuring.equalsIgnoreCase("cancel")) {
-			verlofAanvraag.Annuleren();
+			verlofAanvraagEJB.annuleren();
 		}
 		return "home";
 	}
