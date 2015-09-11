@@ -1,6 +1,8 @@
 package org.betavzw.entities;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * 
@@ -45,7 +47,7 @@ public class Werknemer {
 	private int postcode;
 	
 	/**
-	 * De naam van de gemeente
+	 * De naam van de gemeente waar de werknemer woont
 	 */
 	private String gemeente;
 	
@@ -58,7 +60,13 @@ public class Werknemer {
 	 * Het team waartoe deze werknemer geboord
 	 */
 	private Team team;
+	
+	/**
+	 * Het aantal verlofdagen dat deze werknemer in gegeven jaar heeft
+	 */
+	private Set<JaarlijksVerlof> jaarlijkseVerloven = new HashSet<JaarlijksVerlof>();
 
+	
 	public String getNaam() {
 		return naam;
 	}
@@ -137,6 +145,14 @@ public class Werknemer {
 
 	public void setTeam(Team team) {
 		this.team = team;
+	}
+
+	public Set<JaarlijksVerlof> getJaarlijkseVerloven() {
+		return jaarlijkseVerloven;
+	}
+
+	public void setJaarlijkseVerloven(Set<JaarlijksVerlof> jaarlijkseVerloven) {
+		this.jaarlijkseVerloven = jaarlijkseVerloven;
 	}
 
 }

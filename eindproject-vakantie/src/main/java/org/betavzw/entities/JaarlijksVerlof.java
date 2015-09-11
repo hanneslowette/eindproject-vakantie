@@ -1,6 +1,7 @@
 package org.betavzw.entities;
 
 public class JaarlijksVerlof {
+	
 	private int jaar;
 	private int aantalDagen;
 
