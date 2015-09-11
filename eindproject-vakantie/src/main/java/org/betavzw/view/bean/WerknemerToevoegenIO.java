@@ -2,10 +2,12 @@ package org.betavzw.view.bean;
 
 import java.sql.Date;
 
+import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
+import org.betavzw.ejb.PersoonEJB;
 import org.betavzw.entities.Adres;
 import org.betavzw.entities.Werknemer;
 
@@ -17,6 +19,9 @@ public class WerknemerToevoegenIO {
 	private Adres adres;
 	private String email;
 	private Date geboortedatum;
+	
+	@EJB
+	private PersoonEJB persoon; 
 	
 	
 	public WerknemerToevoegenIO(String naam, String voornaam, Adres adres,

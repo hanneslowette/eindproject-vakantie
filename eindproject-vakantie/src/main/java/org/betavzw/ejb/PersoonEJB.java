@@ -5,6 +5,8 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.betavzw.entities.Werknemer;
+
 /**
  * 
  * @author user104
@@ -18,7 +20,11 @@ import javax.persistence.PersistenceContext;
 	 */
 	@PersistenceContext private EntityManager manager;
 	
-	public void voegPersoonToe() {
+	public void voegPersoonToe(Werknemer w) {
+		manager.persist(w);
+		//return team;
+		
+		
 		
 	}
 
