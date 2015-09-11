@@ -26,6 +26,7 @@ public class WerknemerToevoegenIO {
 	
 	public void voegWerknemerToe() {
 		Werknemer w = new Werknemer();
+		
 		//w.
 		}
 	
