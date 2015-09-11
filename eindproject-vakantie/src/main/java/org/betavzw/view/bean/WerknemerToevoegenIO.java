@@ -1,4 +1,4 @@
-package org.betavzw.backingbeans;
+package org.betavzw.view.bean;
 
 public class WerknemerToevoegenIO {
 
