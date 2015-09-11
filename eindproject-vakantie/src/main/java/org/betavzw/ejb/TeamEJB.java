@@ -1,5 +1,6 @@
 package org.betavzw.ejb;
 
+import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,6 +17,7 @@ import org.betavzw.entities.Team;
  * 
  * @author Hannes Lowette
  */
+@LocalBean
 @Stateless public class TeamEJB {
 
 	/**
@@ -24,12 +26,12 @@ import org.betavzw.entities.Team;
 	@PersistenceContext private EntityManager manager;
 
 	/**
-	 * 
+	 * Krijg een team uit de database aan de hand van de id
 	 * 
 	 * @param id
 	 * @return
 	 */
-	@Transactional private Team getTeam(int id) {
+	@Transactional private Team get(int id) {
 		return manager.find(Team.class, id);
 	}
 
