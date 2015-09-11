@@ -24,7 +24,7 @@ public class VerlofAanvraag {
 	/**
 	 * De huidige toestand van de aanvraag
 	 */
-	private Toestand toestand;
+	private Toestand toestand = Toestand.PENDING;
 
 	public LocalDate getStartDatum() {
 		return startDatum;
@@ -59,12 +59,15 @@ public class VerlofAanvraag {
 	}
 
 	public void Goedkeuren() {
+		this.toestand = Toestand.ACCEPTED;
 	}
 
 	public void Afkeuren() {
+		this.toestand = Toestand.REJECTED;
 	}
 
 	public void Annuleren() {
+		this.toestand = Toestand.CANCELED;
 	}
 
 }
