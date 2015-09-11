@@ -12,7 +12,7 @@ public class HibernateMain {
 	public static void main(String[] args) {
 		
 		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("eindproject-vakantie");
+				.createEntityManagerFactory("unitName");
 		
 		EntityManager em = emf.createEntityManager();
 
